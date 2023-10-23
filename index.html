@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/Gartoon-Team-Gartoon-Categories-Wine.ico" type="image/x-icon">
+    <title>estudando html</title>
+    <link rel="stylesheet" href="imc_calc.css">
+</head>
+<body>
+    <header>
+        <div id="titulo">
+            <h1>Calculadora de IMC</h1>
+        </div>
+        <div id="menu">
+        </div>
+    </header>
+    <div id="header_bottom"></div>
+    <div id="container">
+        <div class="caixa_input">
+            Peso: <input type="number" id="peso">
+        </div>
+        <div class="caixa_input">
+            Altura: <input type="number" id="altura">
+        </div>
+        <div class="botao">
+            <button id="button" onclick="calcular()">calcular</button>
+        </div>  
+        <div id="resultado" ></div>      
+    </div>
+    <script>
+        var botao = document.getElementById("button")
+        
+        function calcular(){
+        setTimeout(() => {
+            botao.style.backgroundColor = "#522800"
+            botao.style.padding = "10px"
+        }, 150);
+        botao.style.backgroundColor = "#823000a1"
+        botao.style.padding = "12px"
+        var peso_input = document.getElementById('peso')
+        var altura_input = document.getElementById('altura')
+        var peso_valor = Number(peso_input.value)
+        var altura_valor = Number(altura_input.value)
+        var valor_final = (peso_valor/(altura_valor**2)).toFixed(2)
+        var vf_str = valor_final.toString()
+        var vf_exibir = document.getElementById('resultado')
+        vf_exibir.innerText = `Seu IMC é: ${vf_str}`
+        }
+</script>
+    
+
+</body>
+</html> 

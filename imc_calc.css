@@ -1,0 +1,124 @@
+@charset "UTF-8";
+:root{
+    --caixa_e_header: #FD9616;
+    --fundo: rgb(41, 37, 34);
+    --elementos_internos_escuro: #522800;
+    --elementos_internos_claro: #823000;
+}
+
+header{
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    color: var(--caixa_e_header);
+    background-color: var(--elementos_internos_escuro);
+}
+
+#header_bottom{
+    height: 10px;
+    background-color: #ff975b;
+}
+
+#titulo{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: normal;
+    font-weight: lighter;
+    padding-left: 2%;
+}
+
+#menu{
+    color: var(--elementos_internos_escuro);
+    margin-right: 2%;
+    background-color: var(--caixa_e_header);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url(3pontos.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+
+}
+   
+
+body{
+    margin: 0%;
+    color: aliceblue;
+    background-color: var(--fundo)
+}
+
+#container{
+    position: relative;
+    transform: translateY(50%);
+    width: 250px;
+    height: 260px;
+    background-color: var(--caixa_e_header);
+    border-radius: 7px;
+    margin: auto;
+    background-position: center center;
+    background-size: cover;    
+}
+
+
+.caixa_input{
+    font-family: script, slab-serif, selima, georgia , arial;
+    font-style: italic;
+    font-size:x-large;
+    padding-top: 10px;
+    color: var(--elementos_internos_escuro);
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.caixa_input > input{
+    display: flex;
+    margin-left: 20px;
+    height: 30px;
+    width: 50px;
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    border-radius: 7px;
+    background-color: #823000a1 ;
+    transition-duration: 0.3s;
+    
+}
+.caixa_input > input:focus{
+    transform: translateY(-3px);
+    padding: 2px;
+    background-color: var(--elementos_internos_escuro);
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+}
+.botao{
+    text-align: center;
+    padding: 10px;
+    background-size: 0%;
+}
+.botao > button{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: var(--caixa_e_header);
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 1px;
+    background-color: var(--elementos_internos_escuro);
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.botao > button:hover{
+    transition-duration: 0.3s;
+	transform: translateY(-3px)
+}
+#resultado{
+    font-family: script, slab-serif, selima, georgia , arial;
+    font-style: italic;
+    -webkit-text-stroke-width: 0.5px ;
+    font-size:20PX;
+    color: var(--elementos_internos_escuro);
+    padding-top: 10px;
+    text-align: center;
+}
