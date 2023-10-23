@@ -12,8 +12,7 @@
         <div id="titulo">
             <h1>Calculadora de IMC</h1>
         </div>
-        <div id="menu">
-        </div>
+        <div id="menu" onmouseenter="ms_enter_menu()" onmouseout="ms_out_menu()" onclick="ms_click_menu()"></div>
     </header>
     <div id="header_bottom"></div>
     <div id="container">
@@ -30,7 +29,8 @@
     </div>
     <script>
         var botao = document.getElementById("button")
-        
+        var menu = document.getElementById("menu")
+
         function calcular(){
         setTimeout(() => {
             botao.style.backgroundColor = "#522800"
@@ -47,6 +47,26 @@
         var vf_exibir = document.getElementById('resultado')
         vf_exibir.innerText = `Seu IMC é: ${vf_str}`
         }
+
+        function ms_enter_menu(){
+        menu.style.backgroundColor = "#ffa63a"
+        }
+
+        function ms_out_menu(){
+        menu.style.backgroundColor = "#FD9616"
+        }
+
+        function ms_click_menu(){
+        setTimeout(() => {
+            menu.style.backgroundColor = "#FD9616"
+            menu.style.padding = "0px"
+
+        }, 150);
+        menu.style.backgroundColor = "#b6602f"
+        menu.style.padding = "1px"
+        
+        }
+
 </script>
     
 

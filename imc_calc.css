@@ -1,5 +1,7 @@
 @charset "UTF-8";
 :root{
+    --whenclick:  #b6602f;
+    --when_mouseenter: #ffa63a;
     --caixa_e_header: #FD9616;
     --fundo: rgb(41, 37, 34);
     --elementos_internos_escuro: #522800;
@@ -42,7 +44,6 @@ header{
 
 }
    
-
 body{
     margin: 0%;
     color: aliceblue;
