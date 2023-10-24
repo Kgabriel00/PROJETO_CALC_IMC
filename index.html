@@ -25,46 +25,54 @@
         <div class="botao">
             <button id="button" onclick="calcular()">calcular</button>
         </div>  
-        <div id="resultado" ></div>      
+        <div id="resultado" ></div> 
+        <div class="comentario"></div>     
     </div>
     <script>
         var botao = document.getElementById("button")
         var menu = document.getElementById("menu")
 
         function calcular(){
-        setTimeout(() => {
-            botao.style.backgroundColor = "#522800"
-            botao.style.padding = "10px"
-        }, 150);
-        botao.style.backgroundColor = "#823000a1"
-        botao.style.padding = "12px"
-        var peso_input = document.getElementById('peso')
-        var altura_input = document.getElementById('altura')
-        var peso_valor = Number(peso_input.value)
-        var altura_valor = Number(altura_input.value)
-        var valor_final = (peso_valor/(altura_valor**2)).toFixed(2)
-        var vf_str = valor_final.toString()
-        var vf_exibir = document.getElementById('resultado')
-        vf_exibir.innerText = `Seu IMC é: ${vf_str}`
+            setTimeout(() => {
+                botao.style.backgroundColor = "#522800"
+                botao.style.padding = "10px"
+            }, 150);
+            botao.style.backgroundColor = "#823000a1"
+            botao.style.padding = "12px"
+            var peso_input = document.getElementById('peso')
+            var altura_input = document.getElementById('altura')
+            var peso_valor = Number(peso_input.value)
+            var altura_valor = Number(altura_input.value)
+            var valor_final = (peso_valor/(altura_valor**2)).toFixed(2)
+            var vf_str = valor_final.toString()
+            var vf_exibir = document.getElementById('resultado')
+            vf_exibir.innerText = `Seu IMC é: ${vf_str}`
+            var comentario_media = document.getElementsByClassName('comentario')[0]
+            if(valor_final >= 18 && valor_final <= 24){
+                comentario_media.innerText = `você está com uma boa média!`
+            }
+            if(valor_final < 18 || valor_final > 24){
+            comentario_media.innerText = `sua média não está muito boa,
+            cuide da sua saúde!`
+            }
         }
 
         function ms_enter_menu(){
-        menu.style.backgroundColor = "#ffa63a"
+            menu.style.backgroundColor = "#ffa63a"
         }
 
         function ms_out_menu(){
-        menu.style.backgroundColor = "#FD9616"
+            menu.style.backgroundColor = "#FD9616"
         }
 
         function ms_click_menu(){
-        setTimeout(() => {
-            menu.style.backgroundColor = "#FD9616"
-            menu.style.padding = "0px"
+            setTimeout(() => {
+                menu.style.backgroundColor = "#FD9616"
+                menu.style.padding = "0px"
 
-        }, 150);
-        menu.style.backgroundColor = "#b6602f"
-        menu.style.padding = "1px"
-        
+            }, 150);
+            menu.style.backgroundColor = "#b6602f"
+            menu.style.padding = "1px"
         }
 
 </script>
